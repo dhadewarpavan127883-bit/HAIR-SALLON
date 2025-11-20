@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAJESHWARA — Student Salon (Wix-style)</title>
+  <meta name="description" content="RAJESHWARA — Student project inspired by a Wix salon layout" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">RAJESHWARA</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <section id="home" class="hero">
+    <div class="bg"></div>
+    <div class="overlay"></div>
+
+    <div class="social-left">
+      <a href="#">f</a>
+      <a href="#">t</a>
+      <a href="#">i</a>
+    </div>
+    <div class="dots-right">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="wrap content">
+      <h1>Welcome</h1>
+      <p>To RAJESHWARA — a student-made salon website inspired by the example you provided.</p>
+    </div>
+  </section>
+
+  <div class="tiles wrap" style="margin-top:18px">
+    <div class="tile" style="grid-column:span 1">
+      <div class="img img1"></div>
+      <div class="label"><h4>FACIALS</h4><a href="#contact">BOOK NOW &gt;</a></div>
+    </div>
+
+    <div class="tile black">
+      <div class="img img2"></div>
+      <div class="label"><h4>MAKE UP</h4><a href="#contact">BOOK NOW &gt;</a></div>
+    </div>
+
+    <div class="tile">
+      <div class="img img3"></div>
+      <div class="label"><h4>HAIR STYLING</h4><a href="#contact">BOOK NOW &gt;</a></div>
+    </div>
+
+    <div class="tile">
+      <div class="img img4"></div>
+      <div class="label"><h4>NAILS</h4><a href="#contact">BOOK NOW &gt;</a></div>
+    </div>
+  </div>
+
+  <section class="services-dark" id="services">
+    <div class="wrap">
+      <h2 class="book-title">Book Now</h2>
+      <div class="service-list">
+
+        <div class="svc">
+          <h3>Haircut (Men / Women)</h3>
+          <p>Simple precision haircut for everyday style.</p>
+          <div class="meta">30 min — ₹150</div>
+          <button>Book It</button>
+        </div>
+
+        <div class="svc">
+          <h3>Balayage</h3>
+          <p>Hand-painted soft natural highlights.</p>
+          <div class="meta">3 hr — ₹1500</div>
+          <button>Book It</button>
+        </div>
+
+        <div class="svc">
+          <h3>Keratin Treatment</h3>
+          <p>Smoothing treatment for frizz control and shine.</p>
+          <div class="meta">2 hr — ₹2500</div>
+          <button>Book It</button>
+        </div>
+
+        <div class="svc">
+          <h3>Manicure</h3>
+          <p>Simple manicure with nail polish.</p>
+          <div class="meta">45 min — ₹180</div>
+          <button>Book It</button>
+        </div>
+
+        <div class="svc">
+          <h3>Facial (Hydrating)</h3>
+          <p>Refreshing facial for glowing skin.</p>
+          <div class="meta">1 hr — ₹500</div>
+          <button>Book It</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="test-row">
+      <div class="t"><p>"Best salon experience — friendly stylists and great cuts."</p><strong>- Riya S., Client</strong></div>
+      <div class="t"><p>"Color lasted and looked natural. Highly recommend."</p><strong>- Aman K., Client</strong></div>
+      <div class="t"><p>"Quick and professional service for my bridal makeup."</p><strong>- Neha P., Client</strong></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-cta">
+    <div class="wrap">
+      <div class="contact-box">
+        <h3>Visit Us / Book</h3>
+        <p class="contact-info">123 Blossom Lane, City • Mon-Sat: 10am-8pm</p>
+        <form onsubmit="event.preventDefault();alert('Demo booking sent');this.reset();">
+          <input placeholder="Full name" required>
+          <input type="email" placeholder="Email" required>
+          <input placeholder="Phone" required>
+          <select>
+            <option>Choose service</option>
+            <option>Haircut</option>
+            <option>Balayage</option>
+            <option>Keratin</option>
+          </select>
+          <textarea rows="3" placeholder="Message (optional)"></textarea>
+          <button type="submit">Send Booking</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="yr"></span> RAJESHWARA — Student Project • Images: Unsplash/Wix (for demo)
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}
+    }));
+  </script>
+</body>
+</html>
